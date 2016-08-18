@@ -1,0 +1,28 @@
+p,h1,h2,h3,h4,ul,ol,li,textarea,input,a {
+	font-family:Roboto;
+}
+
+a{
+	color: #ff6b00;
+}
+
+a:hover{
+	text-decoration:unset;
+}
+
+#obtain,#encoding{
+	display:none;
+}
+
+#header{
+	width:100%;
+	text-align:center;
+	background-color:orange;
+	font-size:24px;
+	padding-top:10px;
+	padding-bottom:10px;
+	color:black;
+}
+#header > a {
+	color:black;
+}
