@@ -10,10 +10,6 @@ a:hover{
 	text-decoration:unset;
 }
 
-#obtain,#encoding{
-	display:none;
-}
-
 #header{
 	width:100%;
 	text-align:center;
