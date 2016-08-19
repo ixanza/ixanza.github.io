@@ -10,6 +10,12 @@ a:hover{
 	text-decoration:unset;
 }
 
+textarea {
+	color:black;
+	border-radius:5px;
+	font-size:12px;
+}
+
 body {
     overflow: scroll;
 }
@@ -37,11 +43,13 @@ ul.tabs {
     border: 1px solid #ccc;
     background-color: #f1f1f1;
 	text-align:center;
+	font-size:24px;
 }
 
 /* Float the list items side by side */
 ul.tabs li {
 	display:inline-block;
+	font-size:24px;
 }
 
 /* Style the links inside the list items */
@@ -52,7 +60,7 @@ ul.tabs li a {
     padding: 14px 16px;
     text-decoration: none;
     transition: 0.3s;
-    font-size: 17px;
+    font-size:24px;
 }
 
 /* Change background color of links on hover */

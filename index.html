@@ -39,7 +39,7 @@
 			<li>Make sure you are using a root file browser such as <a target="_blank" href="https://play.google.com/store/apps/details?id=com.estrongs.android.pop&hl=en">ES File Explorer</a> or <a target="_blank" href="https://play.google.com/store/apps/details?id=com.jrummy.root.browserfree&hl=en">Root Browser</a></li>
 			<li>Navigate to /data/&#8203;data/&#8203;air.com.r2gamesusa.clickerheroes/&#8203;com.r2gamesusa.clickerheroes/&#8203;Local Store/#SharedObjects</li>
 			<li>Copy ClickerHeroesAccountSO.sol to your sdcard</li>
-			<li>Browse for the copied file below</li>
+			<li>Browse for the copied file in the next tab</li>
 			</ol>
 			<h3>Method 2 (Unrooted)</h3>
 			<p>Refer to <a target="_blank" href="https://docs.google.com/document/d/1E_5rw2SF_LP6zrroWvGdPe5ZpBmudp0j5lU8M-Kp7Fg/edit">this guide</a> created by <a target="_blank" href="https://www.reddit.com/user/PlainBillOregon"> u/PlainBillOregon</a> on Reddit.</p>
@@ -81,13 +81,13 @@
 		</div>
 		<div class="tablinks" style="text-align:center;padding-top:2%;padding-bottom:2%">
 			<input type="file" id="files" class="inputfile" name="file" />
-			<label class="btncust btnlabel" for="files">Choose a file..</label><br/><br/>
+			<label class="btncust btnlabel" for="files">Choose a file..</label>
 			<button class="btn btncust" id="btn" data-clipboard-target="#decoded" style="display:none">
 			Copy to clipboard
 			</button>
 		</div>
 		<div class="tablinks" style="text-align:center;width:100%">
-			<textarea id="decoded" style="height: 500px;width:100%"></textarea>
+			<textarea id="decoded" onclick="this.focus();this.select()" style="height: 500px;width:90%;resize:none"></textarea>
 		</div>
 		</div>
 		
@@ -106,46 +106,46 @@
 	</body>
 <script>
 	$(document).ready(function(){
-	$('ul.tabs').each(function(){
-  // For each set of tabs, we want to keep track of
-  // which tab is active and its associated content
-  var $active, $content, $links = $(this).find('a');
+		$('ul.tabs').each(function(){
+		  // For each set of tabs, we want to keep track of
+		  // which tab is active and its associated content
+		  var $active, $content, $links = $(this).find('a');
 
-  // If the location.hash matches one of the links, use that as the active tab.
-  // If no match is found, use the first link as the initial active tab.
-  $active = $($links.filter('[href="'+location.hash+'"]')[0] || $links[0]);
-  $active.addClass('active');
+		  // If the location.hash matches one of the links, use that as the active tab.
+		  // If no match is found, use the first link as the initial active tab.
+		  $active = $($links.filter('[href="'+location.hash+'"]')[0] || $links[0]);
+		  $active.addClass('active');
 
-  $content = $($active[0].hash);
+		  $content = $($active[0].hash);
 
-  // Hide the remaining content
-  $links.not($active).each(function () {
-    $(this.hash).hide();
-  });
+		  // Hide the remaining content
+		  $links.not($active).each(function () {
+			$(this.hash).hide();
+		  });
 
-  // Bind the click event handler
-  $(this).on('click', 'a', function(e){
-    // Make the old tab inactive.
-    $active.removeClass('active');
-    $content.hide();
+		  // Bind the click event handler
+		  $(this).on('click', 'a', function(e){
+			// Make the old tab inactive.
+			$active.removeClass('active');
+			$content.hide();
 
-    // Update the variables with the new link and content
-    $active = $(this);
-    $content = $(this.hash);
+			// Update the variables with the new link and content
+			$active = $(this);
+			$content = $(this.hash);
 
-    // Make the tab active.
-    $active.addClass('active');
-    $content.show();
+			// Make the tab active.
+			$active.addClass('active');
+			$content.show();
 
-    // Prevent the anchor's default click action
-    e.preventDefault();
-  });
-});
-	var btn = document.getElementById('btn');
-    var clipboard = new Clipboard(btn);
-	$(function() {
-    $("#link1").trigger("click");
-	});
+			// Prevent the anchor's default click action
+			e.preventDefault();
+		  });
+		});
+		var btn = document.getElementById('btn');
+		var clipboard = new Clipboard(btn);
+		$(function() {
+		$("#link1").trigger("click");
+		});
 		$('#files').change(function(evt){
 			var files = evt.target.files;
 			for (var i = 0, f; f = files[i]; i++)
