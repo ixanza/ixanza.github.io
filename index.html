@@ -18,15 +18,15 @@
 	<div style="width:100%">
 	<div style="width:80%;margin:0 auto;">
 		<div>
-		<h1 style="text-align:center">CLICKER HEROES MOBILE SAVE RETRIEVER</h1>
+		<h1 style="text-align:center">CLICKER HEROES MOBILE SAVE UPLOADER</h1>
 			<p>
-			This tool lets you upload your Clicker Heroes save file from Android (iOS coming soon) and removes the header and footer of the file to make it compatible with a save file encoder which can then be used for <a target="_blank" href="https://www.reddit.com/r/ClickerHeroes/wiki/calculators">calculators</a> as well as displaying your progress from <a target="_blank" href="http://alexbonjour.github.io/clicker-lister/">Clicker Lister</a>. 
+			This tool lets you upload your Clicker Heroes save file from Android or Jailbroken iOS and removes the header and footer of the file to make it compatible with a save file encoder which can then be used for <a target="_blank" href="https://www.reddit.com/r/ClickerHeroes/wiki/calculators">calculators</a> as well as displaying your progress from <a target="_blank" href="http://alexbonjour.github.io/clicker-lister/">Clicker Lister</a>. 
 			</p>
 		</div>
-		<div id="obtainSave">
+		<div id="obtainSaveAndroid">
 			<h1 id="obtainId">How to obtain your save file (Android)</h1>
 		</div>
-		<div id="obtain">
+		<div id="obtainAndroid">
 			<h3>Method 1 (Rooted)</h3>
 			<ol>
 			<li>Make sure you are using a root file browser such as <a target="_blank" href="https://play.google.com/store/apps/details?id=com.estrongs.android.pop&hl=en">ES File Explorer</a> or <a target="_blank" href="https://play.google.com/store/apps/details?id=com.jrummy.root.browserfree&hl=en">Root Browser</a></li>
@@ -37,6 +37,20 @@
 			<h3>Method 2 (Unrooted)</h3>
 			<p>Refer to <a target="_blank" href="https://docs.google.com/document/d/1E_5rw2SF_LP6zrroWvGdPe5ZpBmudp0j5lU8M-Kp7Fg/edit">this guide</a> created by <a target="_blank" href="https://www.reddit.com/user/PlainBillOregon"> u/PlainBillOregon</a> on Reddit.</p>
 		</div>
+		<div id="obtainSaveIOS">
+			<h1 id="obtainId">How to obtain your save file (iOS)</h1>
+		</div>
+		<div id="obtainIOS">
+			<h3>This only works on jailbroken iOS with a file manager such as Filza</h3>
+			<ol>
+			<li>Open up Filza and head to /private/var/mobile/Containers/Data/Applications</li>
+			<li>Look for the Clicker Heroes folder and navigate into it</li>
+			<li>Next, open Library and under Path click the link, it'll open up a properties windows and click the parent folder and copy and paste it somewhere. (You'll need that info for later)</li>
+			<li>In the Clicker Heroes folder, navigate to /Application Support/com.playsaurus.clickerheroes/Local Store/#SharedObjects</li>
+			<li>Look for ClickerHeroesAccountSO.sol . This is your save game.</li>
+			<li>Credits to <a target="_blank" href="https://www.reddit.com/user/Delerowen">/u/Delerowen</a> on Reddit</li>
+			</ol>
+			</div>
 		<div id="encodingSave">
 			<h1 id="encodeId">Encoding the save file</h1>
 		</div>
@@ -63,30 +77,11 @@
 		</div>
 		</div>
 	</div>
-	<div style="text-align:right:">
-	<img src="http://www.reliablecounter.com/count.php?page=ixanza.github.io&digit=style/plain/10/&reloads=1" alt="" title="" border="0">
-	</div>
 	</body>
 <script>
 	$(document).ready(function(){
 	var btn = document.getElementById('btn');
     var clipboard = new Clipboard(btn);
-	$('#obtainSave').click(function(){
-		if($('#obtain').is(":visible")==true){
-			$('#obtain').fadeOut();
-		}
-		else{
-		$('#obtain').fadeIn();
-		}
-	})
-	$('#encodingSave').click(function(){
-		if($('#encoding').is(":visible")==true){
-			$('#encoding').fadeOut();
-		}
-		else{
-		$('#encoding').fadeIn();
-		}
-	})
 		$('#files').change(function(evt){
 			var files = evt.target.files;
 			for (var i = 0, f; f = files[i]; i++)
