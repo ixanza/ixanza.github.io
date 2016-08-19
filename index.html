@@ -17,44 +17,51 @@
 	</div>
 	<div style="width:100%">
 	<div style="width:80%;margin:0 auto;">
-		<div>
-		<h1 style="text-align:center">CLICKER HEROES MOBILE SAVE UPLOADER</h1>
+		<ul class="tabs">
+			<li><a href="#tab1" class="tablinks" id="link1">Introduction</a></li>
+			<li><a href="#tab2" class="tablinks" id="link2">Uploader</a></li>
+			<li><a href="#tab3" class="tablinks" id="link3">Calculator</a></li>
+			<li><a href="#tab4" class="tablinks" id="link4">Lister</a></li>
+		</ul>
+		<div id="tab1" class="tabcontent">
+		<div class="tablinks">
+		<h1 style="text-align:center">INTRODUCTION</h1>
 			<p>
 			This tool lets you upload your Clicker Heroes save file from Android or Jailbroken iOS and removes the header and footer of the file to make it compatible with a save file encoder which can then be used for <a target="_blank" href="https://www.reddit.com/r/ClickerHeroes/wiki/calculators">calculators</a> as well as displaying your progress from <a target="_blank" href="http://alexbonjour.github.io/clicker-lister/">Clicker Lister</a>. 
 			</p>
 		</div>
-		<div id="obtainSaveAndroid">
+		<div class="tablinks" id="obtainSaveAndroid">
 			<h1 id="obtainId">How to obtain your save file (Android)</h1>
 		</div>
-		<div id="obtainAndroid">
+		<div class="tablinks" id="obtainAndroid">
 			<h3>Method 1 (Rooted)</h3>
 			<ol>
 			<li>Make sure you are using a root file browser such as <a target="_blank" href="https://play.google.com/store/apps/details?id=com.estrongs.android.pop&hl=en">ES File Explorer</a> or <a target="_blank" href="https://play.google.com/store/apps/details?id=com.jrummy.root.browserfree&hl=en">Root Browser</a></li>
-			<li>Navigate to /data/data/air.com.r2gamesusa.clickerheroes/com.r2gamesusa.clickerheroes/Local Store/#SharedObjects</li>
+			<li>Navigate to /data/&#8203;data/&#8203;air.com.r2gamesusa.clickerheroes/&#8203;com.r2gamesusa.clickerheroes/&#8203;Local Store/#SharedObjects</li>
 			<li>Copy ClickerHeroesAccountSO.sol to your sdcard</li>
 			<li>Browse for the copied file below</li>
 			</ol>
 			<h3>Method 2 (Unrooted)</h3>
 			<p>Refer to <a target="_blank" href="https://docs.google.com/document/d/1E_5rw2SF_LP6zrroWvGdPe5ZpBmudp0j5lU8M-Kp7Fg/edit">this guide</a> created by <a target="_blank" href="https://www.reddit.com/user/PlainBillOregon"> u/PlainBillOregon</a> on Reddit.</p>
 		</div>
-		<div id="obtainSaveIOS">
+		<div class="tablinks" id="obtainSaveIOS">
 			<h1 id="obtainId">How to obtain your save file (iOS)</h1>
 		</div>
-		<div id="obtainIOS">
+		<div class="tablinks" id="obtainIOS">
 			<h3>This only works on jailbroken iOS with a file manager such as Filza</h3>
 			<ol>
-			<li>Open up Filza and head to /private/var/mobile/Containers/Data/Applications</li>
+			<li>Open up Filza and head to /private/&#8203;var/&#8203;mobile/&#8203;Containers/&#8203;Data/&#8203;Applications</li>
 			<li>Look for the Clicker Heroes folder and navigate into it</li>
 			<li>Next, open Library and under Path click the link, it'll open up a properties windows and click the parent folder and copy and paste it somewhere. (You'll need that info for later)</li>
-			<li>In the Clicker Heroes folder, navigate to /Application Support/com.playsaurus.clickerheroes/Local Store/#SharedObjects</li>
+			<li>In the Clicker Heroes folder, navigate to /Application Support/&#8203;com.playsaurus.clickerheroes/&#8203;Local Store/&#8203;#SharedObjects</li>
 			<li>Look for ClickerHeroesAccountSO.sol . This is your save game.</li>
-			<li>Credits to <a target="_blank" href="https://www.reddit.com/user/Delerowen">/u/Delerowen</a> on Reddit</li>
 			</ol>
+			<p>Credits to <a target="_blank" href="https://www.reddit.com/user/Delerowen">/u/Delerowen</a> on Reddit</p>
 			</div>
-		<div id="encodingSave">
+		<div class="tablinks" id="encodingSave">
 			<h1 id="encodeId">Encoding the save file</h1>
 		</div>
-		<div id="encoding">
+		<div class="tablinks" id="encoding">
 			<p>Unfortunately as I do not have access to the encoding process, we will be using another website to handle the encoding of the save file</p>
 			<ol>
 			<li>Copy the file below by either clicking "Copy to clipboard" or by highlighting the entire text and copying it.</li>
@@ -63,25 +70,82 @@
 			<li>Paste the contents of your save file into the Decoded box</li>
 			<li>The encoded save file should appear in the Encoded box</li>
 			<li>Copy the encoded save file</li>
+			<li>Make sure to use the select all function on your device before copying to avoid errors</li>
 			<li>You can now use this on any <a target="_blank" href="https://www.reddit.com/r/ClickerHeroes/wiki/calculators">calculators</a> or <a target="_blank" href="http://alexbonjour.github.io/clicker-lister/">listers</a></li>
 			</ol>
 		</div>
-		<div style="text-align:center;padding-top:2%;padding-bottom:2%">
-			<input type="file" id="files" name="file" /><br/><br/>
-			<button class="btn" id="btn" data-clipboard-target="#decoded" style="display:none">
+		</div>
+		<div id="tab2" class="tabcontent">
+		<div class="tablinks">
+		<h1 style="text-align:center">CLICKER HEROES MOBILE SAVE UPLOADER</h1>
+		</div>
+		<div class="tablinks" style="text-align:center;padding-top:2%;padding-bottom:2%">
+			<input type="file" id="files" class="inputfile" name="file" />
+			<label class="btncust btnlabel" for="files">Choose a file..</label><br/><br/>
+			<button class="btn btncust" id="btn" data-clipboard-target="#decoded" style="display:none">
 			Copy to clipboard
 			</button>
 		</div>
-		<div style="text-align:center;width:100%">
+		<div class="tablinks" style="text-align:center;width:100%">
 			<textarea id="decoded" style="height: 500px;width:100%"></textarea>
 		</div>
 		</div>
+		
+		<div id="tab3" class="tabcontent">
+		<div class="tablinks">
+		<h1 style="text-align:center">IN PROGRESS</h1>
+		</div>
+		</div>
+		<div id="tab4" class="tabcontent">
+		<div class="tablinks">
+		<h1 style="text-align:center">IN PROGRESS</h1>
+		</div>
+		</div>
+	</div>
 	</div>
 	</body>
 <script>
 	$(document).ready(function(){
+	$('ul.tabs').each(function(){
+  // For each set of tabs, we want to keep track of
+  // which tab is active and its associated content
+  var $active, $content, $links = $(this).find('a');
+
+  // If the location.hash matches one of the links, use that as the active tab.
+  // If no match is found, use the first link as the initial active tab.
+  $active = $($links.filter('[href="'+location.hash+'"]')[0] || $links[0]);
+  $active.addClass('active');
+
+  $content = $($active[0].hash);
+
+  // Hide the remaining content
+  $links.not($active).each(function () {
+    $(this.hash).hide();
+  });
+
+  // Bind the click event handler
+  $(this).on('click', 'a', function(e){
+    // Make the old tab inactive.
+    $active.removeClass('active');
+    $content.hide();
+
+    // Update the variables with the new link and content
+    $active = $(this);
+    $content = $(this.hash);
+
+    // Make the tab active.
+    $active.addClass('active');
+    $content.show();
+
+    // Prevent the anchor's default click action
+    e.preventDefault();
+  });
+});
 	var btn = document.getElementById('btn');
     var clipboard = new Clipboard(btn);
+	$(function() {
+    $("#link1").trigger("click");
+	});
 		$('#files').change(function(evt){
 			var files = evt.target.files;
 			for (var i = 0, f; f = files[i]; i++)
@@ -93,7 +157,7 @@
 					{
 						var contents = reader.result;
 						var lines = contents.split('\n');
-						var firstIndex = contents.indexOf('{');
+						var firstIndex = contents.indexOf('{"');
 						var lastIndex = contents.lastIndexOf('}');
 						var formattedContent = contents.substring(firstIndex,lastIndex+1);
 						$('#decoded').val(formattedContent);

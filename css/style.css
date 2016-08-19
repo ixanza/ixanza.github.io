@@ -10,6 +10,11 @@ a:hover{
 	text-decoration:unset;
 }
 
+body {
+    overflow: scroll;
+}
+
+
 #header{
 	width:100%;
 	text-align:center;
@@ -22,3 +27,72 @@ a:hover{
 #header > a {
 	color:black;
 }
+
+/* Style the list */
+ul.tabs {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    border: 1px solid #ccc;
+    background-color: #f1f1f1;
+	text-align:center;
+}
+
+/* Float the list items side by side */
+ul.tabs li {
+	display:inline-block;
+}
+
+/* Style the links inside the list items */
+ul.tabs li a {
+    display: inline-block;
+    color: black;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    transition: 0.3s;
+    font-size: 17px;
+}
+
+/* Change background color of links on hover */
+ul.tabs li a:hover {background-color: #ddd;}
+
+/* Create an active/current tablink class */
+ul.tabs li a:focus, .active {background-color: #ccc;}
+
+/* Style the tab content */
+.tabcontent {
+    padding: 6px 12px;
+    border: 1px solid #ccc;
+    border-top: none;
+}
+
+.inputfile {
+	
+	width: 0.1px;
+	height: 0.1px;
+	opacity: 0;
+	overflow: hidden;
+	position: absolute;
+	z-index: -1;
+}
+
+.btncust {
+	font-family:Roboto;
+	padding:2%;
+	border:unset;
+	border-radius:5px;
+	font-size: 1.25em;
+    font-weight: 700;
+    color: white;
+    background-color: #fbb040;
+    display: inline-block;
+	-webkit-transition-duration: 0.4s; /* Safari */
+    transition-duration: 0.4s;
+}
+
+.btncust:hover {
+	background-color:#333333;
+}
+
