@@ -1,4 +1,4 @@
-p,h1,h2,h3,h4,ul,ol,li,textarea,input,a {
+p,h1,h2,h3,h4,ul,ol,li,textarea,input,a,header,label,table,th,tr,td{
 	font-family:Roboto;
 }
 
@@ -104,3 +104,51 @@ ul.tabs li a:focus, .active {background-color: #ccc;}
 	background-color:#333333;
 }
 
+.panel-heading {
+	background-color:#fbb040;
+	padding-top:1%;
+	padding-bottom:1%;
+	text-align:center;
+	font-weight:bold;
+	border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
+	color:white;
+
+}
+.panel-body {
+	padding-left:1%;
+	padding-right:1%;
+	border:1px solid #ccc;
+	border-top:1px solid #fbb040;
+	border-bottom-left-radius :10px;
+	border-bottom-right-radius: 10px;
+}
+
+.panel-body > p {
+	font-size:14px;
+}
+
+#input{
+	padding-top:2%;
+}
+
+.radiobtn{
+	width:15px;
+	height:15px;
+}
+
+.tooltip{
+	margin-left:0px !important;
+}
+.tooltip-main{
+	margin-left:0px !important;
+}
+.top {
+	margin-left:0px !important;
+}
+
+.tooltip-inner {
+	display:none;
+	font-family:roboto;
+	font-weight:bold;
+}

@@ -1,0 +1,351 @@
+<html>
+    <head>
+        <title>Clicker Heroes Optimizer</title>
+        <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+        <link rel="stylesheet" type="text/css" href="css/style.css">
+        <link rel="stylesheet" type="text/css" href="http://cdnjs.cloudflare.com/ajax/libs/bootstrap-slider/7.1.0/css/bootstrap-slider.min.css">
+        
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+        <script src="http://cdnjs.cloudflare.com/ajax/libs/lodash.js/3.10.0/lodash.min.js"></script>
+        <script src="http://chlist.github.io/decoder/assets/js/md5.js"></script>
+        <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
+        <script src="http://cdnjs.cloudflare.com/ajax/libs/bootstrap-slider/7.1.0/bootstrap-slider.min.js"></script>
+        <script src="data/functions.js"></script>
+		<script src="js/clipboard.min.js"></script>
+        <script src="data/model.js"></script>
+        <script src="js/calc.js"></script>
+        <script src="js/utils.js"></script>
+		<script src="js/kepowcalc.js"></script>
+    </head>
+    <body>
+	<div id="header">
+	<a target="_blank" href="http://www.clickerheroes.com">Clicker Heroes</a> |
+	<a target="_blank" href="https://www.reddit.com/r/ClickerHeroes/">Reddit</a> | 
+	<a target="_blank" href="https://www.facebook.com/Clicker-Heroes-696573203747255/">Facebook</a> | 
+	<a target="_blank" href="https://twitter.com/clickerheroes">Twitter</a>
+	</div>
+	<div style="width:100%">
+	<div style="width:80%;margin:0 auto;">
+		<ul class="tabs">
+			<li><a href="#tab1" class="tablinks" id="link1">Introduction</a></li>
+			<li><a href="#tab2" class="tablinks" id="link2">Uploader</a></li>
+			<li><a href="#tab3" class="tablinks" id="link3">Calculator</a></li>
+			<li><a href="#tab4" class="tablinks" id="link4">Lister</a></li>
+		</ul>
+		<div id="tab1" class="tabcontent">
+		<div class="tablinks">
+		<h1 style="text-align:center">INTRODUCTION</h1>
+			<p>
+			This tool lets you upload your Clicker Heroes save file from Android or Jailbroken iOS and removes the header and footer of the file to make it compatible with a save file encoder which can then be used for <a target="_blank" href="https://www.reddit.com/r/ClickerHeroes/wiki/calculators">calculators</a> as well as displaying your progress from <a target="_blank" href="http://alexbonjour.github.io/clicker-lister/">Clicker Lister</a>. 
+			</p>
+		</div>
+		<div class="tablinks" id="obtainSaveAndroid">
+			<h1 id="obtainId">How to obtain your save file (Android)</h1>
+		</div>
+		<div class="tablinks" id="obtainAndroid">
+			<h3>Method 1 (Rooted)</h3>
+			<ol>
+			<li>Make sure you are using a root file browser such as <a target="_blank" href="https://play.google.com/store/apps/details?id=com.estrongs.android.pop&hl=en">ES File Explorer</a> or <a target="_blank" href="https://play.google.com/store/apps/details?id=com.jrummy.root.browserfree&hl=en">Root Browser</a></li>
+			<li>Navigate to /data/&#8203;data/&#8203;air.com.r2gamesusa.clickerheroes/&#8203;com.r2gamesusa.clickerheroes/&#8203;Local Store/#SharedObjects</li>
+			<li>Copy ClickerHeroesAccountSO.sol to your sdcard</li>
+			<li>Browse for the copied file in the next tab</li>
+			</ol>
+			<h3>Method 2 (Unrooted)</h3>
+			<p>Refer to <a target="_blank" href="https://docs.google.com/document/d/1E_5rw2SF_LP6zrroWvGdPe5ZpBmudp0j5lU8M-Kp7Fg/edit">this guide</a> created by <a target="_blank" href="https://www.reddit.com/user/PlainBillOregon"> u/PlainBillOregon</a> on Reddit.</p>
+		</div>
+		<div class="tablinks" id="obtainSaveIOS">
+			<h1 id="obtainId">How to obtain your save file (iOS)</h1>
+		</div>
+		<div class="tablinks" id="obtainIOS">
+			<h3>This only works on jailbroken iOS with a file manager such as Filza</h3>
+			<ol>
+			<li>Open up Filza and head to /private/&#8203;var/&#8203;mobile/&#8203;Containers/&#8203;Data/&#8203;Applications</li>
+			<li>Look for the Clicker Heroes folder and navigate into it</li>
+			<li>Next, open Library and under Path click the link, it'll open up a properties windows and click the parent folder and copy and paste it somewhere. (You'll need that info for later)</li>
+			<li>In the Clicker Heroes folder, navigate to /Application Support/&#8203;com.playsaurus.clickerheroes/&#8203;Local Store/&#8203;#SharedObjects</li>
+			<li>Look for ClickerHeroesAccountSO.sol . This is your save game.</li>
+			</ol>
+			<p>Credits to <a target="_blank" href="https://www.reddit.com/user/Delerowen">/u/Delerowen</a> on Reddit</p>
+			</div>
+		<div class="tablinks" id="encodingSave">
+			<h1 id="encodeId">Encoding the save file</h1>
+		</div>
+		<div class="tablinks" id="encoding">
+			<p>Unfortunately as I do not have access to the encoding process, we will be using another website to handle the encoding of the save file</p>
+			<ol>
+			<li>Copy the file below by either clicking "Copy to clipboard" or by highlighting the entire text and copying it.</li>
+			<li>Head over to <a target="_blank" href="https://www.itshax.com/Clicker-Heroes/pro-mode#page-0"> ItsHax Clicker Heroes Save Game Editor</a></li>
+			<li>Hit next until you are at page 3</li>
+			<li>Paste the contents of your save file into the Decoded box</li>
+			<li>The encoded save file should appear in the Encoded box</li>
+			<li>Copy the encoded save file</li>
+			<li>Make sure to use the select all function on your device before copying to avoid errors</li>
+			<li>You can now use this on any <a target="_blank" href="https://www.reddit.com/r/ClickerHeroes/wiki/calculators">calculators</a> or <a target="_blank" href="http://alexbonjour.github.io/clicker-lister/">listers</a></li>
+			</ol>
+		</div>
+		</div>
+		<div id="tab2" class="tabcontent">
+		<div class="tablinks">
+		<h1 style="text-align:center">CLICKER HEROES MOBILE SAVE UPLOADER</h1>
+		</div>
+		<div class="tablinks" style="text-align:center;padding-top:2%;padding-bottom:2%">
+			<input type="file" id="files" class="inputfile" name="file" />
+			<label class="btncust btnlabel" for="files">Choose a file..</label>
+			<button class="btn btncust" id="btn" data-clipboard-target="#decoded" style="display:none">
+			Copy to clipboard
+			</button>
+		</div>
+		<div class="tablinks" style="text-align:center;width:100%">
+			<textarea id="decoded" onclick="this.focus();this.select()" readonly style="height: 500px;width:90%;resize:none"></textarea>
+		</div>
+		</div>
+		
+		<div id="tab3" class="tabcontent">
+		<div class="tablinks">
+		<h1 style="text-align:center">CALCULATOR</h1>
+		</div>
+		<div>
+		<div class="wrapper">
+        <div class="panel panel-info">
+            <header class="panel-heading">Note</header>
+            <div class="panel-body">
+                <p>
+                    This calculator is 100% the work of <a href="https://www.reddit.com/u/beskhue" target="_blank">/u/beskhue</a> and his <a target="_blank" href="http://kepow.org/clickerheroes/">calculator</a> . I take no credit in this. All credits for this calculator belongs to him.
+                </p>
+				<p>
+                    This calculator has been modified to load decoded save data by default as that is the way the mobile version stores the save file.
+                </p>
+				<p>
+                    The calculator assumes that, at the very least, you own Siyalatas for idle and hybrid builds, and Fragsworth for active builds.
+                </p>
+                <p>
+                The source code can be found <a href="https://github.com/Beskhue/ClickerHeroesCalculator">here</a>.
+                </p>
+            </div>
+        </div>
+		<div style="text-align:center;padding-top:2%">
+		<button type="button" id="importbtn" class="btn btncust" onclick="Import()">Import From Uploader</button>
+		</div>
+        <div id="input">
+            <div class="panel panel-primary">
+              <header class="panel-heading">Data</header>
+              <div class="panel-body">
+                <div style="float: right; margin-top: 10px;margin-right:2%;">
+                    <button type="button" id="update" onclick="calculateAndUpdate()" class="btn btncust" style="padding:10%;">Update</button>  
+                </div>
+                <div class="panel-settings">
+                    <div style="padding-top:1%">
+                        <label><input type="checkbox" onclick="Import()" id="addsouls"> Include souls gained after ascension</label>
+                    </div>
+                    <div>
+                        <label><input type="checkbox" onclick="Import()" id="wep8k"> Wepwawet will be leveled beyond 8,000</label>
+                    </div>
+                    <div style="padding-top:2%;padding-bottom:2%">
+                        Build:<br/>
+                        <label><input type="radio" class="radiobtn" name="buildmode" onclick="Import()" value="idle" checked="checked"> Idle</label>
+                        <!--<label><input type="radio" class="radiobtn" name="buildmode" onclick="Import()" value="hybrid"> Hybrid</label>-->
+                        <label><input type="radio" class="radiobtn" name="buildmode" onclick="Import()" value="active"> Active</label>
+                    </div>
+                    <div id="hybridratiocontainer" style="padding-top:2%">
+                        <label>Ratio Fragsworth/Siyalatas (default: 0.5) : <font id="ratvalue"></font><br>
+                        <input id="hybridratio" data-slider-id="hybridratioSlider" type="text" data-slider-min="0.05" data-slider-max="5" data-slider-step="0.05" data-slider-scale="logarithmic" value="0.5"/>
+						</label>
+                    </div>
+                </div>
+              </div>
+            </div>
+        </div>
+        <div role="tabpanel" id="output">
+            <ul class="nav nav-tabs" role="tablist">
+                <li role="presentation" class="active"><a href="#tab-ancients" aria-controls="tab-ancients" role="tab" data-toggle="tab">Ancients</a></li>
+                <li role="presentation"><a href="#tab-outsiders" aria-controls="tab-outsiders" role="tab" data-toggle="tab">Outsiders</a></li>
+                <li role="presentation"><a href="#tab-other" aria-controls="tab-other" role="tab" data-toggle="tab">Other</a></li>
+            </ul>
+            <div class="tab-content">
+            <div role="tabpanel" class="tab-pane active" id="tab-ancients">
+                <div class="panel-heading"></div>
+                <table id="ancienttbl" class="table">
+                    <thead>
+                        <tr>
+                            <th class="col1">Ancient</th>
+                            <th class="col2">Current</th>
+                            <th class="col3">Goal</th>
+                            <th class="col4">Change</th>
+                            <th class="col5">Cost (HS)</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="odd_row">
+                            <td class="col1">Hero Souls</td>
+                            <td class="col2"><input type="text" id="soulsin" value="0" onblur="calculateAndUpdate()"></td>
+                            <td class="col3"><span id="soulsgoal"></span></td>
+                            <td class="col4"><span id="soulschange"></span></td>
+                            <td class="col5"></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div role="tabpanel" class="tab-pane" id="tab-outsiders">
+                <table id="outsidertbl" class="table table-striped">
+                    <thead><tr><th>Outsider</th><th>Current</th></tr></thead>
+                </table>
+            </div>
+            <div role="tabpanel" class="tab-pane" id="tab-other">
+                <table class="table table-striped">
+                    <tr><td><label for="tp">Transcendent Power</label></td><td><input type="text" id="tp" disabled></td></tr>
+                    <tr><td><label for="ascensionzone">Highest Zone Reached</td><td><input type="text" id="ascensionzone" disabled></td></tr>
+                    <tr><td><label for="tprewardcapzone">TP Reward Cap Zone</label></td><td><input type="text" id="tprewardcapzone" disabled></td></tr>
+                    <tr><td><label for="astotal">Ancient Souls Total</label></td><td><input type="text" id="astotal" disabled></td></tr>
+                </table>
+            </div>
+          </div>
+        </div>
+        <div role="tabpanel" id="about">
+            <ul class="nav nav-tabs" role="tablist">
+                <li role="presentation" class="active"><a href="#tab-about" aria-controls="tab-about" role="tab" data-toggle="tab">About</a></li>
+                <li role="presentation"><a href="#tab-faq" aria-controls="tab-faq" role="tab" data-toggle="tab">FAQ</a></li>
+                <li role="presentation"><a href="#tab-changelog" aria-controls="tab-changelog" role="tab" data-toggle="tab">Changelog</a></li>
+            </ul>
+            <div class="tab-content">
+                <div role="tabpanel" class="tab-pane active" id="tab-about">
+                    <p>
+                        <em>Calculator for Clicker Heroes v1.0 by <a href="https://www.reddit.com/u/beskhue">/u/beskhue</a>.</em>
+                    </p>
+                    <p>
+                        This calculator uses the <em><a href="https://www.reddit.com/r/ClickerHeroes/comments/4naohc/math_and_transcendance/">Rules of Thumb</a></em> to offer ancient suggestions. The calculator distributes the available hero souls among the available ancients.
+                    </p>
+                    <p>
+                        See also: <a href="https://www.reddit.com/user/Shruikan864">/u/Shruikan864</a>'s <a href="https://www.reddit.com/r/ClickerHeroes/comments/4nox6i/rules_of_thumb_10_spreadsheet/">Rules of Thumb 1.0 Spreadsheet</a> and <a href="https://www.reddit.com/user/sugima">/u/sugima</a>'s <a href="https://www.reddit.com/r/ClickerHeroes/comments/4naohc/math_and_transcendance/">1.0 Rules of Thumb</a>.
+                    </p>
+                    <p>
+                        Data structure is loosely based on the code by <a href="https://philni.neocities.org/ancientssoul.html">/u/philni</a>, which is based on the code by <a href="https://s3-us-west-2.amazonaws.com/clickerheroes/ancientssoul.html">/u/rler</a>, which in turn was based on the original calculator and source from <a href="http://www.rivsoft.net/clicker/ancientssoul">rivsoft</a>. Optimization procedure based on <a href="https://www.reddit.com/user/graceoflives">/u/graceoflives</a>' <a href="https://www.reddit.com/r/ClickerHeroes/comments/4nwf3h/10_ancient_calculator/">calculator</a>. Visit <a href="https://www.reddit.com/r/clickerheroes">/r/clickerheroes</a> for more info.
+                    </p>
+                </div>
+                <div role="tabpanel" class="tab-pane" id="tab-faq"> 
+                    <p>If you press on the number in the <em>change</em> field, the number changes to a long format and is automatically selected for copying. If you hold &quot;v&quot; when clicking on the corresponding ancient's purchase button, an input field will pop up. Paste the number you just copied into this field, and press &quot;Ok&quot;.</p>
+                    
+                    <h3>Why does the calculator tell me to level Morgulis more than I am able to?</h3>
+                    <p>It probably doesn't. If you have the outsider Chor'gorloth leveled, all ancients become cheaper, including Morgulis. This means that one level in Morgulis costs less than one soul when buying in bulk.</p>
+
+                    <h3>After buying the recommended ancients, why do I have more souls left over than the calculator predicts?</h3>
+                    <p>Firstly, when you have many souls to spend the calculator will over-estimate the cost of a few ancients with a &quot;difficult&quot; cost formula. This approximation is accurate enough to yield very good recommendations; calculating it precisely often does not actually make a difference in regard to the number of levels recommended. Only the predicted cost becomes more accurate. Secondly, when you have only few souls to spend the predicted cost is accurate as far as the cost formulae go; there appear to be some issues in-game where an ancient sometimes costs one soul less or more than it should.</p>
+                    
+                    <h3>Will you add the ancient Revolc/Sniperino/... to the list?</h3>
+                    <p>The efficiency of these kinds of ancients depends on your personal play style. There are no rules of thumb in a general sense to tell you how to level them. For most people I would recommend leveling them to a point where their cost is insignificant. If you spent 1e17 souls this ascension and were left with 1e13 souls, you could use some of those to level these ancients.</p>
+                    
+                    <h3>What hybrid ratio should I go with?</h3>
+                    <p>This depends on your personal play style. A good starting point is to go with a ratio of 0.5. This works well if you usually push at the end of a run. If you notice you do not often push, drop to a lower ratio. If you notice you often push for many zones, go higher. Perhaps you only idle at the very start of an ascension. In that case, going higher than a ratio of 1 makes sense.</p>
+                </div>
+                <div role="tabpanel" class="tab-pane" id="tab-changelog">
+                    <table class="table table-striped">
+                        <thead>
+                            <tr><th>Date</th><th>Change</th></tr>
+                        </thead>
+                        <tbody>
+                            <tr><td>2016/07/26</td><td>Improve suggestions for the case where Wepwawet will be leveled beyond level 8,000.</td></tr>
+                            <tr><td>2016/07/02</td><td>Add FAQ.</td></tr>
+                            <tr><td>2016/07/01</td><td>Add adjustable hybrid ratio.</td></tr>
+                            <tr><td>2016/06/20</td><td>Implemented much better cost approximation.</td></tr>
+                            <tr><td>2016/06/20</td><td>Implemented quicker and more precise formulae.</td></tr>
+                            <tr><td>2016/06/17</td><td>Update rule for Kumawakamaru.</td></tr>
+                            <tr><td>2016/06/16</td><td>Display TP reward cap zone.</td></tr>
+                            <tr><td>2016/06/16</td><td>Remove Solomon leveling at TP cap based on new calculations.</td></tr>
+                            <tr><td>2016/06/16</td><td>Implemented Solomon leveling at TP cap.</td></tr>
+                            <tr><td>2016/06/16</td><td>Support Atman and Kumawakamaru pre-transcendence (note that optimal RoTs still need to be devised for these ancients).</td></tr>
+                            <tr><td>2016/06/16</td><td>Add method to underlevel Solomon.</td></tr>
+                            <tr><td>2016/06/16</td><td>Solomon calculation is now correct pre-transcendence.</td></tr>
+                            <tr><td>2016/06/15</td><td>Implement easier copying of ancient level changes.</td></tr>
+                            <tr><td>2016/06/15</td><td>If Morgulis is not owned, keep a soul bank.</td></tr>
+                            <tr><td>2016/06/15</td><td>Further improvements to optimization speed. Notably, optimization (for high HS) now runs in constant time.</td></tr>
+                            <tr><td>2016/06/15</td><td>Now correctly takes into account HS requirement to upgrade Siyalatas.</td></tr>
+                            <tr><td>2016/06/15</td><td>Optimization when there are a lot of HS to distribute is now significantly faster.</td></tr>
+                            <tr><td>2016/06/14</td><td>Added support for hybrid and active builds.</td></tr>
+                            <tr><td>2016/06/14</td><td>Initial release.</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+		</div>
+		</div>
+		<div id="tab4" class="tabcontent">
+		<div class="tablinks">
+		<h1 style="text-align:center">IN PROGRESS</h1>
+		</div>
+		</div>
+	</div>
+	</div>
+    <script>
+	$(document).ready(function(){
+		$('#ratvalue').text($('#hybridratio').attr('aria-valuenow'));
+		$('#hybridradio').change(function(){
+			$('#ratvalue').text($('#hybridratio').attr('aria-valuenow'));
+		})
+		$('ul.tabs').each(function(){
+		  // For each set of tabs, we want to keep track of
+		  // which tab is active and its associated content
+		  var $active, $content, $links = $(this).find('a');
+
+		  // If the location.hash matches one of the links, use that as the active tab.
+		  // If no match is found, use the first link as the initial active tab.
+		  $active = $($links.filter('[href="'+location.hash+'"]')[0] || $links[0]);
+		  $active.addClass('active');
+
+		  $content = $($active[0].hash);
+
+		  // Hide the remaining content
+		  $links.not($active).each(function () {
+			$(this.hash).hide();
+		  });
+
+		  // Bind the click event handler
+		  $(this).on('click', 'a', function(e){
+			// Make the old tab inactive.
+			$active.removeClass('active');
+			$content.hide();
+
+			// Update the variables with the new link and content
+			$active = $(this);
+			$content = $(this.hash);
+
+			// Make the tab active.
+			$active.addClass('active');
+			$content.show();
+
+			// Prevent the anchor's default click action
+			e.preventDefault();
+		  });
+		});
+		var btn = document.getElementById('btn');
+		var clipboard = new Clipboard(btn);
+		$(function() {
+		$("#link1").trigger("click");
+		});
+		$('#files').change(function(evt){
+			var files = evt.target.files;
+			for (var i = 0, f; f = files[i]; i++)
+			{
+				var reader = new FileReader();
+				reader.onload = (function(reader)
+				{
+					return function()
+					{
+						var contents = reader.result;
+						var lines = contents.split('\n');
+						var firstIndex = contents.indexOf('{"');
+						var lastIndex = contents.lastIndexOf('}');
+						var formattedContent = contents.substring(firstIndex,lastIndex+1);
+						$('#decoded').val(formattedContent);
+						$('.btn').show();
+					}
+				})(reader);
+				reader.readAsText(f);
+				
+			}
+			
+		})
+	});
+</script>
+    </body>
+</html>
