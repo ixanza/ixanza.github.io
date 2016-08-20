@@ -13,8 +13,18 @@ a:hover{
 textarea {
 	color:black;
 	border-radius:5px;
-	font-size:12px;
+	font-size:10px;
 }
+
+input[type="text"]{
+	color:black;
+	border:1px solid #aaa;
+	border-radius:5px;
+	padding:1%;
+	font-size:24px;
+	width:100%;
+}
+
 
 body {
     overflow: scroll;
@@ -125,7 +135,7 @@ ul.tabs li a:focus, .active {background-color: #ccc;}
 }
 
 .panel-body > p {
-	font-size:14px;
+	font-size:12px;
 }
 
 #input{
@@ -133,8 +143,8 @@ ul.tabs li a:focus, .active {background-color: #ccc;}
 }
 
 .radiobtn{
-	width:15px;
-	height:15px;
+	width:3%;
+	height:3%;
 }
 
 .tooltip{
@@ -151,4 +161,72 @@ ul.tabs li a:focus, .active {background-color: #ccc;}
 	display:none;
 	font-family:roboto;
 	font-weight:bold;
+}
+.tabpanel {
+	background-color:white;
+}
+.ancientTable,.outsiderTable,.otherStats {
+	width:100%;
+	background-color:white;
+	border:1px solid #ccc;
+	border-top:1px solid #fbb040;
+	border-bottom-left-radius :10px;
+	border-bottom-right-radius: 10px;
+}
+.ancientTable,.outsiderTable,.otherStats > thead > tr > th {
+	text-align:left;
+}
+
+.ancientTable,.outsiderTable,.otherStats th {
+	background-color:unset;
+}
+.ancientTable tr > td {
+	font-size:24px;
+	background-color:unset;
+}
+
+#ancienttbl .col1 {
+    width: 18%;
+}
+
+#ancienttbl .col2, .col3 {
+    width: 20%;
+	padding-right:1%;
+}
+#ancienttbl .col4 {
+    width: 20%;
+	padding-right:1%;
+}
+#ancienttbl .col2 > input {
+	width:100%;
+}
+#ancienttbl .col4 > input {
+	width:100%;
+}
+
+.half {
+	display:inline-block;
+	width:49%;
+	margin:0 auto;
+}
+
+.otherStats,.outsiderTable {
+	min-height:202px;
+}
+
+.table-striped {
+	width:100%;
+}
+
+.table-striped > tbody > tr:nth-child(even){
+	background-color:#fbb040;
+}
+
+.table-striped > tbody > tr > td {
+	border:1px solid #ccc;
+}
+
+.calctabs {
+	border-top-left-radius :10px;
+	border-top-right-radius:10px;
 }
