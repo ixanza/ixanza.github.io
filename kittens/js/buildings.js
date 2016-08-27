@@ -361,8 +361,8 @@ dojo.declare("classes.managers.BuildingsManager", com.nuclearunicorn.core.TabMan
 		action: function(self, game){
 			var effects = {
 				"scienceRatio": 0.25,
-				"starEventChance": 0.002,
-				"starAutoSuccessChance": 0.01,
+				"starEventChance": 100,
+				"starAutoSuccessChance": 100,
 				"scienceMax": 1000
 			};
 

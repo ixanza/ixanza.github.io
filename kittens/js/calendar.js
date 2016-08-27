@@ -351,7 +351,7 @@ dojo.declare("com.nuclearunicorn.game.Calendar", null, {
 			this.festivalDays--;
 		}
 
-		var chanceRatio = 1;
+		var chanceRatio = 100;
 		var unicornChanceRatio = 1;
 
 		if (this.game.prestige.getPerk("chronomancy").researched){
@@ -368,7 +368,7 @@ dojo.declare("com.nuclearunicorn.game.Calendar", null, {
 
 		//------------------------- astronomical events -------------------------
 		var chance = 25;									//25 OPTK of event per day	(0.25%)
-		chance += (this.game.bld.getEffect("starEventChance") * 10000);
+		chance += (this.game.bld.getEffect("starEventChance") * 100);
 		chance *= chanceRatio;
 
 		if (this.game.rand(10000) < chance &&
